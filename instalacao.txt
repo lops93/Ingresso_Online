@@ -1,0 +1,8 @@
+composer create-project laravel/laravel=7.* Ingresso_Online
+
+testar banco php artisan tinker
+
+C:\dev\Ingresso_Online\routes\web.php  << criar nova rota
+
+depois de criar a rota faz isso aqui no prompt 
+=php artisan make:controller Site/HomeController --invokable
