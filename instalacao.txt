@@ -1,0 +1,70 @@
+composer create-project laravel/laravel=7.* Ingresso_Online
+
+testar banco php artisan tinker
+
+C:\dev\Ingresso_Online\routes\web.php  << criar nova rota
+
+Route::namespace('Site')->group(function() {
+  Route::get('/', 'HomeController@index');
+
+  //Route::get('produtos', 'CategoryController@index');
+});
+
+depois de criar a rota faz isso aqui no prompt 
+=php artisan make:controller Site/HomeController --invokable
+
+C:\dev\Ingresso_Online\resources\views\site\
+criar pasta home, e o arquivo index.blade.php
+
+C:\dev\Ingresso_Online\resources\views\site\home\index.blade.php
+pagina onde vai ficar o conteudo que vai aparecer
+
+
+criando a pagina de categoria
+
+php artisan make:controller Site/CategoryController -r  (-r de resource, controller com todos os metodos de um crud)
+
+(se n usar esses comandos apos criar as rotas na web, da erro)
+
+o controller criado fica nessa pasta aqui
+C:\dev\Ingresso_Online\app\Http\Controllers\Site\CategoryController.php
+
+(apaguei os metodos que eu nao vou usar, só deixei store e show
+
+C:\dev\Ingresso_Online\app\Http\Controllers\Site\CategoryController.php
+(retornar a view na index) toda a pagina inicial de modulo chama de index
+
+C:\dev\Ingresso_Online\resources\views\site
+criar pasta category. e o arquivo index.blade.php
+
+C:\dev\Ingresso_Online\routes\web.php 
+criar nova rota para cada produto
+
+ Route::get('produtos/{slug}', 'CategoryController@show');  (cai no metodo show)
+(slug é tipo a id do produto, mas de um jeito que apareça na busca do google)
+
+criar view
+C:\dev\Ingresso_Online\resources\views\site\category\show.blade.php
+
+http://127.0.0.1:8000/produtos/teclados  <<essa é a pagima da view  :)
+
+
+criando a pagina de blog (web.php)
+Route::get('blog', 'BlogController@index');
+
+php artisan make:controller Site/BlogController --invokable
+
+
+criar pagina de busca no web.php
+
+Route::view('sobre', 'site.about.index');  (view pq é estatico, n faz busca no banco nem nada)
+C:\dev\Ingresso_Online\resources\views\site\about\index.blade.php
+
+criar pagina de contato
+Route::get('contato', 'ContactController@index');  web.php
+php artisan make:controller Site/ContactController -r
+C:\dev\Ingresso_Online\resources\views\site\contact\index.blade.php
+http://127.0.0.1:8000/contato
+
+criar metodo post pro contato
+Route::post('contato', 'ContactController@form');
