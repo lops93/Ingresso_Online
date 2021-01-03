@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(175, 196, 223)!important;
+}
+
+header{
+    background-color: #ffffff;
+    height: 60px;
+}
+
+.nav-link{
+    color: rgb(78, 46, 110)!important;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+}
+
+.nav-link:hover{
+    color: rgb(157, 122, 192)!important;
+}
+
+.icon-user{
+    font-size: 30pt;
+    margin-top: -10px;
+    color: rgb(78, 46, 110)!important;
+}
+
+.jumbotron{
+    background-color: #22313f38!important;
+}

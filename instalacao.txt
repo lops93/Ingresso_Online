@@ -68,3 +68,31 @@ http://127.0.0.1:8000/contato
 
 criar metodo post pro contato
 Route::post('contato', 'ContactController@form');
+
+finalizar feature para inciar uma nova
+git add ., git commit -m
+git flow feature finish rotas-controllers-views-site-inicio
+
+nova feature
+git flow feature start assets-frontend-estatico
+
+
+criar nova pasta chamada layouts em resources/views
+
+dentro de layouts criar o site.blade.php
+
+agora crie o codigo onde aparecera o conteudo, o site.blade é a parte estatica, header, footer, etc
+
+no site.blade:
+@yield('content')
+
+no index.blade
+@extends('layouts.site')
+
+@section('content')
+
+depois que inserir o conteudo no index.blade, fechar a seção
+@endsection
+
+
+para inserir os css, criar pasta css dentro da pasta public
