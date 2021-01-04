@@ -96,3 +96,14 @@ depois que inserir o conteudo no index.blade, fechar a seção
 
 
 para inserir os css, criar pasta css dentro da pasta public
+
+redirecionar os links ao clicar no menu:
+em routes>web.php ficará assi":
+antes:
+Route::get('/', 'HomeController@index');
+depois:
+Route::get('/', 'HomeController@index')->name('site.home');
+com o nome ele redirecionará para o link
+
+no link passar assim:
+href="{{route('site.home')}}"

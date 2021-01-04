@@ -7,6 +7,10 @@ header{
     height: 60px;
 }
 
+.navbar{
+    padding: .5rem 5rem!important;
+}
+
 .nav-link{
     color: rgb(78, 46, 110)!important;
     font-size: 14pt;
