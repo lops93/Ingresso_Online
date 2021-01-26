@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(175, 196, 223)!important;
+    background-color: rgb(255, 255, 255)!important;
 }
 
 header{
@@ -21,6 +21,7 @@ header{
 
 .nav-link:hover{
     color: rgb(157, 122, 192)!important;
+    border-bottom: 3px rgb(157, 122, 192) solid;
 }
 
 .icon-user{
@@ -29,6 +30,40 @@ header{
     color: rgb(78, 46, 110)!important;
 }
 
+/*******************************HERO******************************/
+/*photo by photoangel*/
 .jumbotron{
-    background-color: #22313f38!important;
+    /*background-image: url("{{asset('images/concert.jpg')}}")!important;*/
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(41, 34, 146, 0.747)), url("../images/concert.jpg")!important;
+    background-size: contain!important;
+    border-radius: 0!important;
+    
+}
+
+.j-h1{
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+
+/*******************************FOOTER******************************/
+footer{
+    background:  rgba(41, 34, 146, 0.747)!important;
+    border-top: 3px rgb(157, 122, 192) dotted;
+    padding: 60px 0;
+}
+
+footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
 }
